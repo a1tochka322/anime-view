@@ -84,7 +84,7 @@ const mainData = () => {
     });
     setTimeout(() => {
       preloader.classList.remove('active');
-    }, 5000);
+    }, 50000);
   };
 
   const renderTopAnime = (array) => {

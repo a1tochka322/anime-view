@@ -93,7 +93,7 @@ const mainData = () => {
       wrapper.insertAdjacentHTML(
         'beforeend',
         `
-                <div class="product__sidebar__view__item set-bg mix" data-setbg="${item.image}">
+                <div class="product__sidebar__view__item set-bg mix" data-setbg="http://baza4.animevost.tv/uploads/posts/2022-02/1644932639_7-7.jpg">
                     <div class="ep">${item.rating} / 10</div>
                     <div class="view"><i class="fa fa-eye"></i> ${item.views}</div>
                     <h5><a href="./anime-details.html?itemId=${item.id}">${item.title}</a></h5>

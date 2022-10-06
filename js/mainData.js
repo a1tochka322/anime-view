@@ -94,7 +94,7 @@ const mainData = () => {
       wrapper.insertAdjacentHTML(
         'beforeend',
         `
-                <div class="product__sidebar__view__item set-bg mix" data-setbg="https://storage.theoryandpractice.ru/tnp/uploads/image_block/000/052/014/image/base_d9dd9b626f.jpg">
+                <div class="product__sidebar__view__item set-bg mix" data-setbg="${item.image}">
                     <div class="ep">${item.rating} / 10</div>
                     <div class="view"><i class="fa fa-eye"></i> ${item.views}</div>
                     <h5><a href="/anime-details.html">${item.title}</a></h5>
@@ -107,6 +107,7 @@ const mainData = () => {
       elem.style.backgroundImage = `url(${elem.dataset.setbg})`;
     });
   };
+
   fetch(
     'https://anime-622bc-default-rtdb.europe-west1.firebasedatabase.app/anime.json',
   )
@@ -118,9 +119,9 @@ const mainData = () => {
         genres.add(item.ganre);
       });
 
-      console.log();
-      renderTopAnime(data.sort((a, b) => b.views - a.views).slice(0, 5));
+      console.log(item.image);
       renderGenreList(genres);
+      renderTopAnime(data.sort((a, b) => b.views - a.views).slice(0, 5));
       renderAnimeList(data, genres);
     });
 };

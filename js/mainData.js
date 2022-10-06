@@ -44,7 +44,7 @@ const mainData = () => {
 
       list.forEach((item) => {
         const listTags = document.createElement('ul');
-
+        console.log(item.image);
         item.tags.forEach((tag) => {
           listTags.insertAdjacentHTML(
             'beforeend',
@@ -107,19 +107,18 @@ const mainData = () => {
       elem.style.backgroundImage = `url(${elem.dataset.setbg})`;
     });
   };
-  console.log('mama');
   fetch(
     'https://anime-622bc-default-rtdb.europe-west1.firebasedatabase.app/anime.json',
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log('papa');
       const genres = new Set();
 
       data.forEach((item) => {
         genres.add(item.ganre);
       });
 
+      console.log();
       renderTopAnime(data.sort((a, b) => b.views - a.views).slice(0, 5));
       renderGenreList(genres);
       renderAnimeList(data, genres);

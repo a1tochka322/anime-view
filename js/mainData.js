@@ -44,7 +44,6 @@ const mainData = () => {
 
       list.forEach((item) => {
         const listTags = document.createElement('ul');
-        console.log(item.image);
         item.tags.forEach((tag) => {
           listTags.insertAdjacentHTML(
             'beforeend',
@@ -119,7 +118,6 @@ const mainData = () => {
         genres.add(item.ganre);
       });
 
-      console.log(item.image);
       renderGenreList(genres);
       renderTopAnime(data.sort((a, b) => b.views - a.views).slice(0, 5));
       renderAnimeList(data, genres);

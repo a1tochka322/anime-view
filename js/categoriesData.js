@@ -110,7 +110,7 @@ const categoriesData = () => {
   };
 
   fetch(
-    '../db.json',
+    'https://anime-622bc-default-rtdb.europe-west1.firebasedatabase.app/anime.json',
   )
     .then((response) => response.json())
     .then((data) => {

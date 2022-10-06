@@ -107,12 +107,13 @@ const mainData = () => {
       elem.style.backgroundImage = `url(${elem.dataset.setbg})`;
     });
   };
-
+  console.log('mama');
   fetch(
-    './db.json',
+    'https://anime-622bc-default-rtdb.europe-west1.firebasedatabase.app/anime.json',
   )
     .then((response) => response.json())
     .then((data) => {
+      console.log('papa');
       const genres = new Set();
 
       data.forEach((item) => {

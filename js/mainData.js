@@ -109,7 +109,7 @@ const mainData = () => {
   };
 
   fetch(
-    'db.json',
+    '../db.json',
   )
     .then((response) => response.json())
     .then((data) => {

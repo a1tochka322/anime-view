@@ -94,7 +94,7 @@ const mainData = () => {
       wrapper.insertAdjacentHTML(
         'beforeend',
         `
-                <div class="product__sidebar__view__item set-bg mix" data-setbg="${item.image}">
+                <div class="product__sidebar__view__item set-bg mix" data-setbg="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftheoryandpractice.ru%2Fposts%2F17973-interesnye-fakty-o-kotikakh&psig=AOvVaw0nLBG3RroD0mTuBbpr7429&ust=1665164924162000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNCrivGUzPoCFQAAAAAdAAAAABAD">
                     <div class="ep">${item.rating} / 10</div>
                     <div class="view"><i class="fa fa-eye"></i> ${item.views}</div>
                     <h5><a href="/anime-details.html">${item.title}</a></h5>

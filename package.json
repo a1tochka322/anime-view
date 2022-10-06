@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "lit": "^2.3.1"
+  },
+  "name": "anime-view",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "eslint": "^8.24.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a1tochka322/anime-view.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a1tochka322/anime-view/issues"
+  },
+  "homepage": "https://github.com/a1tochka322/anime-view#readme",
+  "description": ""
+}

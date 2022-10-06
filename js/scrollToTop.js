@@ -1,15 +1,18 @@
+/* eslint linebreak-style: ["error", "windows"] */
+
 const scrollToTop = () => {
-    const topBtn = document.querySelector('#scrollToTopButton');
+  const topBtn = document.querySelector('#scrollToTopButton');
 
-    topBtn.addEventListener('click', (event) => {
-        event.preventDefault();
+  topBtn.addEventListener('click', (event) => {
+    event.preventDefault();
 
-        seamless.scrollIntoView(document.querySelector(".header"), {
-            behavior: "smooth",
-            block: "center",
-            inline: "center",
-        });
-    })
-}
+    // eslint-disable-next-line no-undef
+    seamless.scrollIntoView(document.querySelector('.header'), {
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center',
+    });
+  });
+};
 
 scrollToTop();

@@ -49,8 +49,8 @@ const detailData = () => {
         preloader.classList.remove('active');
       }, 500);
 
-      titleBlock.textContent = animeObj.title;
-      subTitleBlock.textContent = animeObj['original-title'];
+      titleBlock.textContent = animeObj['original-title'];
+      subTitleBlock.textContent = animeObj.title;
       descriptionBlock.textContent = animeObj.description;
       widgetList[0].insertAdjacentHTML('beforeend', `
         <span>Date aired:</span>

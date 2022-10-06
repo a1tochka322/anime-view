@@ -58,7 +58,7 @@ const mainData = () => {
           `
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" loading="lazy" data-setbg="${item.image}">
+                        <div class="product__item__pic set-bg" loading="lazy" style="background-image: url('${item.image}');">
                             <div class="ep">${item.rating} / 10</div>
                             <div class="view"><i class="fa fa-eye"></i> ${item.views}</div>
                         </div>
@@ -77,10 +77,10 @@ const mainData = () => {
       });
       productBlock.append(listBlock);
       wrapper.append(productBlock);
-      wrapper.querySelectorAll('.set-bg').forEach((elem) => {
-        // eslint-disable-next-line no-param-reassign
-        elem.style.backgroundImage = `url(${elem.dataset.setbg})`;
-      });
+      // wrapper.querySelectorAll('.set-bg').forEach((elem) => {
+      //   // eslint-disable-next-line no-param-reassign
+      //   elem.style.backgroundImage = `url(${elem.dataset.setbg})`;
+      // });
     });
     setTimeout(() => {
       preloader.classList.remove('active');
@@ -113,11 +113,9 @@ const mainData = () => {
     .then((response) => response.json())
     .then((data) => {
       const genres = new Set();
-
       data.forEach((item) => {
         genres.add(item.ganre);
       });
-
       renderGenreList(genres);
       renderTopAnime(data.sort((a, b) => b.views - a.views).slice(0, 5));
       renderAnimeList(data, genres);

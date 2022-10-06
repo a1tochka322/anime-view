@@ -67,7 +67,7 @@ const mainData = () => {
                             ${listTags.outerHTML}
                             
                             <h5>
-                                <a href="anime-details.html?itemId=${item.id}">
+                                <a href="./anime-details.html?itemId=${item.id}">
                                     ${item.title}
                                 </a>
                             </h5>

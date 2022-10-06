@@ -33,7 +33,7 @@ const detailData = () => {
     const breadCrumb = document.querySelector('.breadcrumb__links span');
 
     if (animeObj) {
-      imageBlock.dataset.setbg = animeObj.image;
+      imageBlock.dataset.setbg = `./img/animeList/${animeObj['original-title'].replace(/ |:|'/gi, '')}.jpg`;
       viewsBlock.innerHTML = '';
       viewsBlock.insertAdjacentHTML(
         'beforeend',

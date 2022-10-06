@@ -1,5 +1,5 @@
 const mainData = () => {
-  const preloader = document.querySelector('.preloder');
+  // const preloader = document.querySelector('.preloder');
 
   const renderGenreList = (genres) => {
     const dropdownBlock = document.querySelector('.header__menu .dropdown');
@@ -82,9 +82,9 @@ const mainData = () => {
         elem.style.backgroundImage = `url(${elem.dataset.setbg})`;
       });
     });
-    setTimeout(() => {
-      preloader.classList.remove('active');
-    }, 50000);
+    // setTimeout(() => {
+    //   preloader.classList.remove('active');
+    // }, 50000);
   };
 
   const renderTopAnime = (array) => {
